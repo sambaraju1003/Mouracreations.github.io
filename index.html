@@ -1,257 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moura Creations | Where Creativity Meets Elegance</title>
 
-<title>Moura Creations | Where Creativity Meets Elegance</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-<style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f5f5f5;
-    color:#333;
-}
-
-/* HEADER */
-
-header{
-    background:linear-gradient(135deg,#163d68,#2f5f92);
-    color:white;
-    text-align:center;
-    padding:50px 20px;
-}
-
-header h1{
-    font-size:52px;
-    letter-spacing:2px;
-}
-
-.tagline{
-    margin-top:12px;
-    font-size:22px;
-    color:#ffd369;
-    font-style:italic;
-}
-
-/* NAVIGATION */
-
-nav{
-    background:#222;
-    text-align:center;
-    padding:18px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 18px;
-    font-size:18px;
-    transition:0.3s;
-}
-
-nav a:hover{
-    color:#ffd369;
-}
-
-/* HERO SECTION */
-
-.hero{
-    background:white;
-    padding:90px 20px;
-    text-align:center;
-}
-
-.hero h2{
-    font-size:48px;
-    color:#1f4e79;
-}
-
-.hero h3{
-    margin-top:15px;
-    font-size:30px;
-    color:#c18b00;
-    font-weight:normal;
-}
-
-.hero p{
-    max-width:850px;
-    margin:30px auto;
-    font-size:20px;
-    line-height:1.8;
-    color:#555;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    background:#1f4e79;
-    color:white;
-    text-decoration:none;
-    padding:15px 35px;
-    border-radius:30px;
-    font-size:18px;
-    transition:.3s;
-}
-
-.btn:hover{
-    background:#c18b00;
-}
-
-/* FEATURES */
-
-.features{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:30px;
-    padding:70px 20px;
-}
-
-.card{
-    background:white;
-    width:320px;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-    text-align:center;
-}
-
-.card h3{
-    color:#1f4e79;
-    margin-bottom:15px;
-}
-
-.card p{
-    color:#666;
-    line-height:1.6;
-}
-
-/* FOOTER */
-
-footer{
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:35px;
-}
-
-footer h2{
-    margin-bottom:10px;
-}
-
-footer p{
-    margin:8px;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-header h1{
-    font-size:38px;
-}
-
-.hero h2{
-    font-size:34px;
-}
-
-.hero h3{
-    font-size:24px;
-}
-
-.hero p{
-    font-size:18px;
-}
-
-nav a{
-    display:block;
-    margin:12px 0;
-}
-
-}
-
-</style>
-
+    <!-- Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
+<!-- ================= NAVBAR ================= -->
+
 <header>
 
-<h1>Moura Creations</h1>
-
-<p class="tagline">
-Where Creativity Meets Elegance.
-</p>
-
-</header>
+<div class="logo">
+    Moura <span>Creations</span>
+</div>
 
 <nav>
 
-<a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Collection</a>
-<a href="#">Gallery</a>
-<a href="#">Contact</a>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#collections">Collections</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
 
 </nav>
 
-<section class="hero">
+<div class="menu">
+<i class="fa-solid fa-bars"></i>
+</div>
 
-<h2>Handcrafted with Passion</h2>
+</header>
 
-<h3>Where Creativity Meets Elegance.</h3>
+<!-- ================= HERO ================= -->
 
-<p>
-Welcome to <strong>Moura Creations</strong>, where every handcrafted piece reflects creativity, elegance, and attention to detail. Explore our unique collection of handmade jewellery designed to add beauty, style, and timeless charm to every occasion.
+<section class="hero" id="home">
+
+<div class="hero-left">
+
+<p class="small-title">
+HANDCRAFTED JEWELLERY
 </p>
 
-<a href="#" class="btn">Explore Collection</a>
+<h1>
+
+Crafting Beauty
+
+<span>With Elegance.</span>
+
+</h1>
+
+<p class="hero-text">
+
+Where Creativity Meets Elegance.
+
+Discover timeless handcrafted jewellery designed with passion,
+creativity and attention to every detail.
+
+</p>
+
+<div class="buttons">
+
+<a href="#collections" class="btn primary">
+Explore Collection
+</a>
+
+<a href="#contact" class="btn secondary">
+Contact Us
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<img src="images/hero.png" alt="Jewellery">
+
+</div>
 
 </section>
 
-<section class="features">
+<!-- ================= ABOUT ================= -->
 
-<div class="card">
-<h3>💎 Handmade Jewellery</h3>
+<section class="about" id="about">
+
+<div class="section-title">
+
+<h2>About Moura Creations</h2>
+
 <p>
-Beautiful handcrafted jewellery created with love and precision.
+Every piece tells a story.
 </p>
+
 </div>
 
-<div class="card">
-<h3>✨ Unique Designs</h3>
+<div class="about-content">
+
+<div class="about-box">
+
+<i class="fa-solid fa-gem"></i>
+
+<h3>Handmade Jewellery</h3>
+
 <p>
-Every creation is original, elegant, and crafted to stand out.
+
+Every design is carefully handcrafted with precision and love.
+
 </p>
+
 </div>
 
-<div class="card">
-<h3>❤️ Made with Love</h3>
+<div class="about-box">
+
+<i class="fa-solid fa-wand-magic-sparkles"></i>
+
+<h3>Unique Designs</h3>
+
 <p>
-Designed with passion using quality materials and fine craftsmanship.
+
+Creative collections inspired by elegance and individuality.
+
 </p>
+
+</div>
+
+<div class="about-box">
+
+<i class="fa-solid fa-heart"></i>
+
+<h3>Made with Passion</h3>
+
+<p>
+
+Designed to celebrate every special moment in your life.
+
+</p>
+
+</div>
+
 </div>
 
 </section>
+
+<!-- ================= COLLECTION ================= -->
+
+<section class="collection" id="collections">
+
+<div class="section-title">
+
+<h2>Featured Collection</h2>
+
+<p>
+Our latest handcrafted jewellery.
+</p>
+
+</div>
+
+<div class="products">
+
+<div class="product">
+
+<img src="images/product1.jpg">
+
+<h3>Elegant Necklace</h3>
+
+<p>Premium Handmade Design</p>
+
+<button>View Details</button>
+
+</div>
+
+<div class="product">
+
+<img src="images/product2.jpg">
+
+<h3>Designer Earrings</h3>
+
+<p>Exclusive Collection</p>
+
+<button>View Details</button>
+
+</div>
+
+<div class="product">
+
+<img src="images/product3.jpg">
+
+<h3>Traditional Bracelet</h3>
+
+<p>Handcrafted Beauty</p>
+
+<button>View Details</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= GALLERY ================= -->
+
+<section class="gallery" id="gallery">
+
+<div class="section-title">
+
+<h2>Gallery</h2>
+
+<p>Beautiful Creations</p>
+
+</div>
+
+<div class="gallery-grid">
+
+<img src="images/g1.jpg">
+<img src="images/g2.jpg">
+<img src="images/g3.jpg">
+<img src="images/g4.jpg">
+<img src="images/g5.jpg">
+<img src="images/g6.jpg">
+
+</div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+<div class="contact-left">
+
+<h2>Moura Creations</h2>
+
+<p>
+
+Where Creativity Meets Elegance.
+
+</p>
+
+<p>
+
+<i class="fa-solid fa-phone"></i>
+
++91 XXXXX XXXXX
+
+</p>
+
+<p>
+
+<i class="fa-brands fa-whatsapp"></i>
+
+WhatsApp Available
+
+</p>
+
+<p>
+
+<i class="fa-solid fa-envelope"></i>
+
+your@email.com
+
+</p>
+
+</div>
+
+<div class="contact-right">
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email">
+
+<textarea placeholder="Message"></textarea>
+
+<button type="submit">
+
+Send Message
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
 <h2>Moura Creations</h2>
 
-<p><em>Where Creativity Meets Elegance.</em></p>
+<p>
 
-<p>© 2026 Moura Creations. All Rights Reserved.</p>
+Where Creativity Meets Elegance.
+
+</p>
+
+<div class="social">
+
+<i class="fab fa-facebook"></i>
+
+<i class="fab fa-instagram"></i>
+
+<i class="fab fa-whatsapp"></i>
+
+<i class="fab fa-youtube"></i>
+
+</div>
+
+<p>
+
+© 2026 Moura Creations. All Rights Reserved.
+
+</p>
 
 </footer>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>
