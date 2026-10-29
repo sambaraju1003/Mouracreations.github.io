@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <pattern id="t" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(25)">
+      <rect width="6" height="6" fill="#B0174F"/>
+      <rect x="4" width="2" height="6" fill="#C9A24A"/>
+    </pattern>
+  </defs>
+  <circle cx="32" cy="32" r="26" fill="none" stroke="url(#t)" stroke-width="12"/>
+</svg>
