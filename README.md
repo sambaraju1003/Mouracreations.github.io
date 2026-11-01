@@ -25,12 +25,16 @@ favicon.svg       browser tab icon
 const WHATSAPP_NUMBER = "919876543210";   // 91 + your 10-digit number, digits only
 ```
 
-Every "Order on WhatsApp" and "Ask about this design" button then opens WhatsApp with a message already typed. Until a number is set, those buttons use email instead.
+Every "Order on WhatsApp" and "Ask about this" button then opens WhatsApp with a message already typed. Until a number is set, those buttons use email instead.
+
+Until a WhatsApp number is set, the "Order" buttons open an Instagram direct message to `@moura.127` instead (setting `INSTAGRAM` in the same file).
 
 **Add a new design:**
 1. Crop the photo to portrait 4:5 (for example 720 × 900 px), keep it under about 150 KB, and put it in `images/`.
 2. In `index.html`, copy one `<li class="product" …>` block in the collection, then change the image file name, the description of the photo (`alt`), the name, the description and `data-ask`.
-3. Set `data-cat` to `glass`, `silk`, `kundan` or `coin` so the filter buttons find it.
+3. Set `data-cat` to `glass`, `silk`, `kundan` or `coin` so the filter buttons find it, and give the `<li>` an `id` (the image name) so its Share link works.
+4. Optional: make `.webp` copies (720 wide, and 360 wide named `-360.webp`) for faster phones, or remove the `<source>` line to use only the JPG.
+5. To mark it new, add `<span class="new">New</span>` inside its tag.
 
 **Change text**: edit `index.html` directly. Colours and fonts are at the top of `css/style.css`.
 

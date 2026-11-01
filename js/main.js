@@ -7,6 +7,8 @@
    ============================================================ */
 const WHATSAPP_NUMBER = "";
 const EMAIL = "mouracreations@gmail.com";
+const INSTAGRAM = "moura.127";   // Instagram username, used for "Order on Instagram" until WhatsApp is set
+const instagramDM = `https://ig.me/m/${INSTAGRAM}`;
 
 const hasWhatsApp = /^\d{10,15}$/.test(WHATSAPP_NUMBER);
 const waLink = (text) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
@@ -21,8 +23,11 @@ document.querySelectorAll("[data-whatsapp]").forEach((a) => {
     a.target = "_blank";
     a.rel = "noopener";
   } else {
-    a.href = mailLink("Bangle order", greeting);
-    if (a.textContent.includes("WhatsApp")) a.textContent = "Order by email";
+    // No WhatsApp yet: send people to an Instagram direct message instead.
+    a.href = instagramDM;
+    a.target = "_blank";
+    a.rel = "noopener";
+    if (a.textContent.includes("WhatsApp")) a.textContent = "Order on Instagram";
   }
 });
 if (!hasWhatsApp) {
@@ -144,6 +149,39 @@ form.addEventListener("submit", (e) => {
   if (via === "whatsapp" && hasWhatsApp) window.open(waLink(text), "_blank", "noopener");
   else window.location.href = mailLink(`Bangle enquiry from ${v("cfName")}`, text);
 });
+
+/* ---------- Share a design ---------- */
+let toastTimer;
+function toast(msg) {
+  let el = document.querySelector(".toast");
+  if (!el) { el = document.createElement("div"); el.className = "toast"; el.setAttribute("role", "status"); document.body.appendChild(el); }
+  el.textContent = msg; el.hidden = false;
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => { el.hidden = true; }, 2500);
+}
+document.querySelectorAll("[data-share]").forEach((btn) => btn.addEventListener("click", async () => {
+  const item = btn.closest(".product");
+  const name = item.querySelector("h3").textContent;
+  const url = `${location.origin}${location.pathname}#${item.id}`;
+  if (navigator.share) {
+    try { await navigator.share({ title: `${name} · Moura Creations`, text: `${name}, handmade by Moura Creations`, url }); } catch (e) { /* cancelled */ }
+    return;
+  }
+  try { await navigator.clipboard.writeText(url); toast("Link copied. Paste it in a chat to share this design."); }
+  catch (e) { window.prompt("Copy this link:", url); }
+}));
+
+/* Opening a shared link (#design-id) scrolls to that design and highlights it. */
+function showSharedDesign() {
+  const id = decodeURIComponent(location.hash.slice(1));
+  const item = id && document.getElementById(id);
+  if (!item || !item.classList.contains("product")) return;
+  item.hidden = false;
+  item.scrollIntoView({ behavior: "smooth", block: "center" });
+  item.classList.add("spotlight");
+  setTimeout(() => item.classList.remove("spotlight"), 3000);
+}
+window.addEventListener("load", showSharedDesign);
+window.addEventListener("hashchange", showSharedDesign);
 
 /* ---------- Footer year ---------- */
 document.getElementById("year").textContent = new Date().getFullYear();

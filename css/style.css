@@ -264,6 +264,15 @@ p { margin: 0 0 14px; }
 .footer-brand { display: flex; align-items: center; gap: 14px; }
 .footer-brand img { width: 64px; height: 64px; border-radius: 50%; flex: none; }
 
+.product-img picture { display: block; width: 100%; height: 100%; }
+.new { display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 999px; background: var(--rani); color: var(--rani-ink); font-size: 10.5px; letter-spacing: .08em; vertical-align: 1px; }
+.product-actions { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 8px; flex-wrap: wrap; }
+.product-actions .ask { margin-top: 0; }
+.share { border: 1px solid var(--rule); background: var(--surface); color: var(--muted); border-radius: 999px; padding: 4px 12px; font-size: 13px; font-weight: 600; cursor: pointer; }
+.share:hover { color: var(--ink); border-color: var(--ink); }
+.product.spotlight .product-img { outline: 3px solid var(--rani); outline-offset: 4px; }
+.toast { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--ink); color: var(--paper); padding: 10px 18px; border-radius: 10px; font-size: 15px; z-index: 200; max-width: calc(100vw - 32px); }
+
 /* responsive */
 @media (max-width: 1000px) {
   .products { grid-template-columns: repeat(3, minmax(0, 1fr)); }
